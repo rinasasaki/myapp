@@ -8,11 +8,11 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.1]
       t.string :encrypted_password, null: false, default: "" 
 
       t.string :name,               null: false 
-      t.datetime :birthday,       
-      t.integer :mood,             
-      t.string :brand,            
-      t.integer :taste,             
-      t.integer :food_genre,        
+      t.datetime :birthday       
+      t.integer :mood             
+      t.string :brand            
+      t.integer :taste             
+      t.integer :food_genre        
       t.boolean :is_public,         null: false, default: true
       ## Recoverable
       t.string   :reset_password_token
