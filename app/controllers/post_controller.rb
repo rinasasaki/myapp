@@ -3,21 +3,18 @@ class PostController < ApplicationController
   def index 
     @posts = Post.all
   end
-  
-  def new
-    @post = Post.new
-  end
 
-  def create
-    @post = Post.new(task_params）
-    if @post.save
-      redirect_to post_path
+  def new
+    @posts = Post.new
+  end
+  
+  def post
+    @posts = Post.new(post_params)
+    if @posts.save
+      redirect_to post_path(@post)
     else
-      render 'new'
+      render :new
     end
   end
 
-  private
-  def post_params
-end
 end
