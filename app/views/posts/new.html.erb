@@ -1,15 +1,14 @@
 <h1>新規作成</h1>
 
-<%= link_to '一覧へ', post_index_url %>
-
+<%= link_to '一覧へ', posts_path %>
 <%= form_with model: @post do |f| %>
 <div class="field">
-  <%= f.label :投稿内容 %><br>
-  <%= f.text_field :title %>
+  <%= f.label :タイトル %><br>
+  <%= f.text_field :context %>
 </div>
 <div class="field">
   <%= f.label :詳細 %><br>
-  <%= f.text_field :body %>
+  <%= f.text_field :context %>
 </div>
 <div class="actions">
   <%= f.submit %>
