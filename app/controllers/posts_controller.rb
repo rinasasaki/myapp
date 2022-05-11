@@ -10,7 +10,11 @@ end
 
 def create
   @post = Post.create(post_params)
-  redirect_to posts_path
+  if @post.save
+    redirect_to posts_path
+  else
+    render 'new'
+  end
 end
 
 def show
