@@ -3,16 +3,13 @@
 <td><%= link_to '新規作成', new_post_path %></td>
 
 <table>
-  <thead>
-    <tr>
-      <th>投稿</th>
-    </tr>
-  </thead>
 
   <tbody>
     <% @posts.each do |post| %>
     <tr>
-<td><%= post.context %></td>
+    <td><%= post.context %></td>
+    <td><%= link_to '編集', edit_post_path(post), class: "btn btn-success"  %></td>
+    <td><%= link_to '削除', post, method: :delete, data: { confirm: 'You sure?' }, class: "btn btn-danger" %></td>
     </tr>
 
     <% end %>
