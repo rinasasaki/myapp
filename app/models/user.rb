@@ -16,3 +16,5 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy, foreign_key: :post_user_id
 >>>>>>> e83a75146479e5d2c1b9a2e7b8e3e9e293ec9c9c
 end
+
+
