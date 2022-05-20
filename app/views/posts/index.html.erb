@@ -8,10 +8,10 @@
     <% @posts.each do |post| %>
     <tr>
     <td><%= post.context %></td>
+    <td><%= post.user.name %></td>
     <td><%= link_to '削除', post, method: :delete, data: { confirm: 'You sure?' }, class: "btn btn-danger" %></td>
     </tr>
-
-
     <% end %>
+
   </tbody>
 </table>
