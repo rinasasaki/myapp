@@ -32,4 +32,8 @@ private
     params.require(:post).permit(:user_id, :context)
   end
 
+  def post_params
+    params.require(:post).permit(:text, :image)
+  end
+
 end
