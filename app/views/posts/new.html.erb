@@ -5,6 +5,8 @@
 <div class="field">
   <%= f.label :詳細 %><br>
   <%= f.text_field :context %>
+   <%= f.label :画像 %><br />
+   <%= f.file_field :image, class: "image" %>
 </div>
 <div class="actions">
   <%= f.submit %>
