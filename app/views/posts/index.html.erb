@@ -10,7 +10,7 @@
     <tr>
     <td><%= post.context %></td>
     <td><%= post.user.name %></td>
-    <td><%= image_tag post.image %></td>
+    <td><%= image_tag post.image if post.image.attached? %></td>
     <td><%= link_to '削除', post, method: :delete, data: { confirm: 'You sure?' }, class: "btn btn-danger" %></td>
     </tr>
     <% end %>
