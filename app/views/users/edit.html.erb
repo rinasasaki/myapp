@@ -1,0 +1,19 @@
+<%=form_with model: @user do |form| %>
+<%= form.label :name, "なまえ" %>
+<%= form.text_field :name %>
+
+<%= form.label :birthday, "たんじょうび" %>
+<%= form.date_field :birthday %>
+
+<%= form.label :mood, "ふんいき" %>
+<%= form.range_field :mood, in: 1..100 %>
+
+<%= form.label :brand, "ブランド" %>
+<%= form.text_field :brand %>
+
+<%= form.label :taste, "食の好み" %>
+<%= form.text_field :taste %>
+
+
+
+<% end %>
