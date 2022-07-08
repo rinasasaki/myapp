@@ -1,0 +1,11 @@
+<h1>新規作成</h1>
+
+<%= form_with model: @event do |f| %>
+<div class="field">
+  <%= f.label :イベント %><br>
+  <%= f.text_field :event_name %>
+</div>
+<div class="actions">
+  <%= f.submit %>
+</div>
+<% end %>

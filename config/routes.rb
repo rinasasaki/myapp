@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   # patch'/users/:id', to: 'user#update'
   resources :users, only: [:show, :update, :edit]
   resources :posts
-  resources :events, only: [:post, :delete]
+  resources :events
 end
 
