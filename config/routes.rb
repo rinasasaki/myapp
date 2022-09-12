@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   patch'/users/:id', to: 'user#update'
   resources :posts
   devise_for :users
+  
 end
 
